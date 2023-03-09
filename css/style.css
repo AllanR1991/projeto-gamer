@@ -1,0 +1,43 @@
+@font-face {
+    font-family: inter;
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: titilium;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+:root{
+    --font-primaria: titilium;
+    --font-secundaria: quicksand;
+    --font-terciaria: inter;
+    --cor-primaria: #fff;
+    --cor-secundaria: #000;
+    --cor-terciaria: #f90;
+    --background-color-primaria: #FF9900;
+    --background-color-secundaria: #1B1426;
+    --background-color-gradient: linear-gradient(rgba(27,20,38,1),rgba(27,20,38,0.4),rgba(27,20,38,0));
+}
+
+/* Mobile First */
+
+body{
+    background-color: var(--background-color-primaria);
+    color: var(--cor-primaria);
+}
+
+.headerTop{
+    display: none;
+}
+
+.headerBotton__nav{
+    width: 80vw;
+    height: 100vh;
+    background-image: var(--background-color-gradient);
+}
