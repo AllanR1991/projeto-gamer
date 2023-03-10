@@ -8,80 +8,91 @@
     <title>Gamer</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 770px)" href="css/desktop.css">
 </head>
 
 <body>
     <header>
-        <div class="headerTop">
+        <div class="headerTop grid__margin__mobile">
             <div class="headerTop__contat">
-                <div class="headerTop__contat__phone">
-                    <img src="assets/icons/icon-cel.png" alt="Imagem branca de um telefone.">
+                <div class="headerTop__contat__phone headerTop__contat__flex">
+                    <img src="assets/icons/iconTelefone.svg" alt="Imagem branca de um telefone.">
                     <p>(11) 0900-1010</p>
                 </div>
-                <div class="headerTop__contat__email">
-                    <a href=""><img src="assets/icons/iconEmail.png" alt="Imagem de um envelope correspondente ao e-mail."></a>
+                <div class="headerTop__contat__email headerTop__contat__flex">
+                    <a href=""><img src="assets/icons/iconEmail.svg"
+                            alt="Imagem de um envelope correspondente ao e-mail."></a>
                     <p>contato@gamer.com.br</p>
                 </div>
             </div>
             <div class="headerTop__redesSociais">
-                <a href="https://pt-br.facebook.com/"><img src="assets/icons/icon-facebook.png"
+                <a href="https://pt-br.facebook.com/"><img src="assets/icons/iconFacebook.svg"
                         alt="Icone com simbolo do facebook. Um F no meio de um circulo branco"></a>
-                <a href="https://br.linkedin.com/"><img src="assets/icons/icon-linkedin.png"
+                <a href="https://br.linkedin.com/"><img src="assets/icons/iconLinkedIn.svg"
                         alt="Icone com simbolo do linkedIn. Quadrado com cantos aredondados com IN no meio do quadrado."></a>
-                <a href="https://www.instagram.com/"><img src="assets/icons/icon-instagram.png"
+                <a href="https://www.instagram.com/"><img src="assets/icons/iconInstagram.svg"
                         alt="Icone com simbolo do Instagram. Quadrado com cantos arredondados, um circulo no meio e outro na diagonal superior direita."></a>
             </div>
         </div>
-        <div class="headerBotton">
+        <div class="headerBotton grid__margin__mobile">
 
-            <img class="headerBotton__menoHamburguer" src="assets/icons/icon-menu-mobile-horizontal.png" alt="Icone representando o menu esquerdo, três traços na horizontal, para exibir ou ocultar mais opções no menu.">
+            <img class="headerBotton__menuHamburguer" src="assets/icons/menu-horizontal.svg" alt="Icone representando o menu esquerdo, três traços na horizontal, para exibir ou ocultar mais opções no menu." onclick="exibeMenuNav()">
 
-            <img class="headerBotton__logo" src="assets/images/logotipo-gamer.png" alt="Logotipo do site gamer. Escrito gamer em branco, onde o M é um controle de playstation na cor laranja">
-            
-            <nav class="headerBotton__nav">
-                <a href="">
+            <img class="headerBotton__logo" src="assets/images/logotipo-gamer.svg"
+                alt="Logotipo do site gamer. Escrito gamer em branco, onde o M é um controle de playstation na cor laranja">
+
+            <nav id="navMenuEsquerda" class="headerBotton__nav" >
+
+                <a class="mobile__grid__content__nav" href="">
                     <p>Início</p>
                 </a>
-                <a href="">
-                    <p>Jogadores</p>
-                </a>
-                <a href="">
-                    <p>Notícias</p>
-                </a>
+                
+                    <a class="mobile__grid__content__nav" href="">
+                        <p>Jogadores</p>
+                    </a>
+                    <a class="mobile__grid__content__nav headerBotton__nav__divisao" href="">
+                        <p>Equipes</p>
+                    </a>
+                    <a class="mobile__grid__content__nav headerBotton__nav__divisao" href="">
+                        <p>Notícias</p>
+                    </a>
 
-                <!-- Visível apenas no mobile -->
+                    <!-- Visível apenas no mobile -->
 
-                <div class="headerBottom__contat">
-                    <div class="headerBottom__contat__phone">
-                        <img src="assets/icons/icon-cel.png" alt="Imagem branca de um telefone.">
+
+                    <div class="headerBottom__contat__phone mobile__grid__content__nav flex__gap__icon headerBotton__nav__divisao">
+                        <img src="assets/icons/iconTelefone.svg" alt="Imagem branca de um telefone.">
                         <p>(11) 0900-1010</p>
                     </div>
-                    <div class="headerBottom__contat__email">
-                        <a href=""><img src="assets/icons/iconEmail.png" alt="Imagem de um envelope correspondente ao e-mail."></a>
+                    <div class="headerBottom__contat__email mobile__grid__content__nav flex__gap__icon headerBotton__nav__divisao">
+                        <a href=""><img src="assets/icons/iconEmail.svg"
+                                alt="Imagem de um envelope correspondente ao e-mail."></a>
                         <p>contato@gamer.com.br</p>
                     </div>
-                </div>
+                
+
 
                 <div class="headerBottom__redesSociais">
-                    <a href="https://pt-br.facebook.com/"><img src="assets/icons/icon-facebook.png"
+                    <a href="https://pt-br.facebook.com/"><img src="assets/icons/iconFacebook.svg"
                             alt="Icone com simbolo do facebook. Um F no meio de um circulo branco"></a>
-                    <a href="https://br.linkedin.com/"><img src="assets/icons/icon-linkedin.png"
+                    <a href="https://br.linkedin.com/"><img src="assets/icons/iconLinkedIn.svg"
                             alt="Icone com simbolo do linkedIn. Quadrado com cantos aredondados com IN no meio do quadrado."></a>
-                    <a href="https://www.instagram.com/"><img src="assets/icons/icon-instagram.png"
+                    <a href="https://www.instagram.com/"><img src="assets/icons/iconInstagram.svg"
                             alt="Icone com simbolo do Instagram. Quadrado com cantos arredondados, um circulo no meio e outro na diagonal superior direita."></a>
                 </div>
             </nav>
-            
-            <div class="headerBotton__menuUser">
-                <a href=""><img src="assets/icons/icon-perfil.png"
+
+            <div class="headerBotton__menuUser" id="navMenuDireita">
+                <a href=""><img src="assets/icons/iconPerfil.svg"
                         alt="Imagem representando um botao para o perfil, um circulo representando a cabeça e abaxio um copinho todos na cor laranja."></a>
-                <a href=""><img src="assets/icons/icon-sacola.png"
+                <a href=""><img src="assets/icons/iconCompras.svg"
                         alt="Imagem representando um botao para compras, sendo um icone de uma sacola na cor laranja"></a>
-                <a href=""><img src="assets/icons/icon-busca.png"
+                <a href=""><img src="assets/icons/iconBusca.svg"
                         alt="Imagem representando um botao para pesquisa, uma lupa na cor laranja"></a>
             </div>
 
-            <img class="headerBotton__menuDots" src="assets/icons/icon-menu-mobile-vertical.png" alt="Icone representando o menu da direita, três traços na vertical.">
+            <img class="headerBotton__menuDots" src="assets/icons/menu-vertical.svg"
+                alt="Icone representando o menu da direita, três traços na vertical." onclick="exibeMenuUser()">
 
         </div>
 
@@ -92,6 +103,8 @@
     <footer>
 
     </footer>
+    
+    <script src="./js/principal.js"></script>
 </body>
 
 </html>

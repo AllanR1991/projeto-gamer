@@ -1,0 +1,17 @@
+@media screen and (min-width: 770px){
+    .headerTop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerTop__contat{
+        display: flex;
+        gap:46px;
+    }
+    .headerTop__contat__flex{
+        display: flex;
+        align-items: center;
+        gap: 18.03px;
+    }
+}
