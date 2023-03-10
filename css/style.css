@@ -31,16 +31,28 @@
     --font-size-terciaria: 14px;
 }
 
-
-
-.mobile__grid__content__nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 77px;
+body{
+    background-color: var(--background-color-primaria);
+    color: var(--cor-primaria);
+    font-size: 1em;
 }
 
+/* classes genericas */
+
+.layout-grid{
+    /* border: 1px solid salmon; */
+    color: var(--cor-primaria);
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.alinhamento__centro__centro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 
 .headerBotton__nav__divisao{
     border-top: 2px solid var(--cor-terciaria);
 }
@@ -51,27 +63,83 @@
 
 .grid__margin__mobile{
     margin: 0 19px;
-}
+} */
 
 /* Mobile First */
 
-body{
-    background-color: var(--background-color-primaria);
-    color: var(--cor-primaria);
-    font-size: 1em;
+/* Header */
+header{
+    background-color: var(--background-color-secundaria);
+    height: 60px;
 }
 
-
+/* Header Top*/
 .headerTop{
     display: none;
 }
 
+/* Header Bottom */
+.headerBotton{
+    height: 100%;
+}
+
+.headerBotton__logo{
+    width: 86px;
+}
+
+
+.headerBotton__menuDots{
+    width: 40px;
+    height: 30px;
+}
+
+/*
+overflow => evita do conteudo transbordar, incluindo uma barra de rolagem ou não.
+*/
+
+.headerBotton__nav{
+    position: fixed;
+    top: 60px;
+    left: -60vw ;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    
+    width: 60vw;
+    max-width: 306px;
+    min-width: 216px;
+    height: 80vh;
+    min-height: 446px;
+    padding: 15px 0px;
+    
+    background-color: #fff;
+    background-image: var(--background-color-gradient);
+    opacity: 0;
+    transition: left 2s, opacity 1s;
+
+}
+
+.mostrarMenuEsquerda{
+    left: 0vw;
+    opacity: 1;
+   
+}
+
+.headerBotton__menuUser{
+    display: none;
+}
+
+
+/* Feito por mim  */
+/* 
 .headerBotton{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: var(--font-terciaria);
     font-size: var(--font-size-terciaria);
+
 }
 
 .headerBotton__nav{
@@ -79,9 +147,9 @@ body{
     top: 60px;
     left: -90vw ;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;*/
     /* justify-content: space-between; */
-    width: 60vw;
+    /* width: 60vw;
     max-width: 306px;
     min-width: 216px;
     height: 80vh;
@@ -136,4 +204,4 @@ body{
     right: 0vw;
     opacity: 1;
     
-}
+} */ 
