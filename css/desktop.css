@@ -1,4 +1,17 @@
 @media screen and (min-width: 770px){
+    
+    .mobile__grid__content__nav{
+        display: block;
+        justify-content: none;
+        align-items: none;
+        width: 0;
+        height: 0;
+    }
+
+    .headerBotton__nav__divisao{
+        border-top: none;
+    }
+    
     .headerTop{
         display: flex;
         justify-content: space-between;
@@ -13,5 +26,46 @@
         display: flex;
         align-items: center;
         gap: 18.03px;
+    }
+
+    .headerBotton{
+        display: flex;
+        background-color: blueviolet;
+    }
+
+    .headerBotton__menuHamburguer{
+        display: none;
+    }
+
+    .headerBotton__nav{
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        width: none;
+        min-width: 0;
+        max-width: none;
+        height: 100%;
+        min-height: 0;
+        max-height: none;
+    }
+    .headerBottom__contat__phone, .headerBottom__contat__email, .headerBottom__redesSociais{
+        display: none;
+    }
+
+    .headerBotton__menuUser{
+        position: static;
+        flex-direction: row;
+        width: none;
+        min-width: 0;
+        max-width: none;
+        height: 100%;
+        min-height: 0;
+        max-height: none;
+        opacity: 1;
+        padding: 0;
+    }
+
+    .headerBotton__menuDots{
+        display: none;
     }
 }
