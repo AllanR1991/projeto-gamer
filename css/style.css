@@ -23,7 +23,7 @@
     --cor-terciaria: #f90;
     --background-color-primaria: #FF9900;
     --background-color-secundaria: #1B1426;
-    --background-color-gradient: linear-gradient(rgba(27,20,38,1)15%, rgba(27,20,38,0.7),rgba(27,20,38,0.4));
+    --background-color-gradient: linear-gradient(to right bottom, rgba(27,20,38,0.7),rgba(27,20,38,0.4));
 
     --font-size-tituloPrincipal: 61px;
     --font-size-primaria: 16px;
@@ -47,11 +47,19 @@ body{
     margin: 0 auto;
 }
 
-.alinhamento__centro__centro{
+.alinhamento__between__centro{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.alinaneto__centro__centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* 
 .headerBotton__nav__divisao{
     border-top: 2px solid var(--cor-terciaria);
@@ -100,7 +108,7 @@ overflow => evita do conteudo transbordar, incluindo uma barra de rolagem ou nã
 .headerBotton__nav{
     position: fixed;
     top: 60px;
-    left: -60vw ;
+    left: 0 ;
 
     display: flex;
     flex-direction: column;
@@ -109,21 +117,46 @@ overflow => evita do conteudo transbordar, incluindo uma barra de rolagem ou nã
     width: 60vw;
     max-width: 306px;
     min-width: 216px;
-    height: 80vh;
+    height: calc(100vh - 60px);
     min-height: 446px;
     padding: 15px 0px;
     
-    background-color: #fff;
     background-image: var(--background-color-gradient);
+    backdrop-filter: blur(45px);/* Efeito Glass*/
     opacity: 0;
     transition: left 2s, opacity 1s;
 
+}
+/* Somente links " filhos diretos."*/
+.headerBotton__nav>a{
+    text-align: center;
+    border-bottom: 1px solid var(--cor-terciaria);
+    padding: 1.87em 0;
+    font-family: var(--font-terciaria);
+    font-size: 0.93em;
+    font-weight: 400;
+}
+
+.headerBotton__nav>a:last-of-type{
+    border-bottom: none;
 }
 
 .mostrarMenuEsquerda{
     left: 0vw;
     opacity: 1;
-   
+}
+
+.headerBottom__redesSociais{
+    position: absolute;
+    bottom: 20px;
+    left:  calc(50% - 100px);
+    width: 200px ;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid var(--background-color-primaria); */
+    
 }
 
 .headerBotton__menuUser{
