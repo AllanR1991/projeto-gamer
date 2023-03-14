@@ -159,10 +159,46 @@ overflow => evita do conteudo transbordar, incluindo uma barra de rolagem ou nã
     
 }
 
+
 .headerBotton__menuUser{
-    display: none;
+    position: fixed;
+    top: 60px;
+    right: -20vw;
+    width: 20vw;
+    max-width: 88px;
+    min-width: 36px;    
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    gap: 23px;
+    
+    background-image: var(--background-color-gradient);
+    backdrop-filter: blur(45px);
+
+    opacity: 0;
+    transition: right 2s, opacity 2s;
 }
 
+.headerBotton__menuDots{
+    width: 30px;
+    height: 30px;
+}
+
+.mostrarMenuDireita{
+    right: 0vw;
+    opacity: 1;
+    
+}
+
+
+/* banner */
+
+.banner {
+    height: 606px;
+    background-image: url(../assets/images/backgroundImgPrincipalMobile.svg);
+}
 
 /* Feito por mim  */
 /* 
